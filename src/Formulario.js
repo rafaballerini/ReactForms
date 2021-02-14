@@ -33,8 +33,8 @@ class Formulario extends Component {
             <form>
                 <div className='row'>
                     <div className='input-field col s4'>
-                        <label htmlFor='nome'>Nome</label>
                         <input
+                            placeholder="Nome" 
                             className='validate'
                             id='nome'
                             type='text'
@@ -44,8 +44,8 @@ class Formulario extends Component {
                         />
                     </div>
                     <div className='input-field col s4'>
-                        <label htmlFor='livro'>Livro</label>
                         <input
+                            placeholder="Livro" 
                             className='validate'
                             id='livro'
                             type='text'
@@ -55,8 +55,8 @@ class Formulario extends Component {
                         />
                     </div>
                     <div className='input-field col s4'>
-                        <label htmlFor='preco'>Preço</label>
                         <input
+                            placeholder="Preço"
                             className='validate'
                             id='preco'
                             type='text'
