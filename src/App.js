@@ -4,6 +4,7 @@ import Tabela from './Tabela';
 import { Component, Fragment } from 'react';
 import Form from './Formulario';
 import Header from './Header';
+import './App.css';
 
 class App extends Component {
 
@@ -57,8 +58,10 @@ class App extends Component {
     return (
       <Fragment>
         <Header/>
-        <Tabela autores = { this.state.autores } removeAutor = { this.removeAutor }/>
-        <Form escutadorDeSubmit={this.escutadorDeSubmit}/>
+        <div className='container mb-10'>
+          <Tabela autores={this.state.autores} removeAutor={this.removeAutor} />
+          <Form escutadorDeSubmit={this.escutadorDeSubmit} />
+        </div>
       </Fragment>
     );
   }

@@ -1,4 +1,3 @@
-import { render } from '@testing-library/react';
 import React, { Component } from 'react';
 
 class Formulario extends Component {
@@ -27,40 +26,52 @@ class Formulario extends Component {
         this.setState(this.stateInicial);
     }
 
-     render(){
-
+    render(){
         const {nome, livro, preco} = this.state;
 
          return(
             <form>
-                <label htmlFor='nome'>Nome</label>
-                <input
-                    id='nome'
-                    type='text'
-                    name='nome'
-                    value={nome}
-                    onChange={this.escutadorDeInput}
-                />
-                <label htmlFor='livro'>Livro</label>
-                <input
-                    id='livro'
-                    type='text'
-                    name='livro'
-                    value={livro}
-                    onChange={this.escutadorDeInput}
-                />
-                <label htmlFor='preco'>Preço</label>
-                <input
-                    id='preco'
-                    type='text'
-                    name='preco'
-                    value={preco}
-                    onChange={this.escutadorDeInput}
-                />
-                <button type='button' onClick={this.submitFormulario}>Salvar</button>
+                <div className='row'>
+                    <div className='input-field col s4'>
+                        <label htmlFor='nome'>Nome</label>
+                        <input
+                            className='validate'
+                            id='nome'
+                            type='text'
+                            name='nome'
+                            value={nome}
+                            onChange={this.escutadorDeInput}
+                        />
+                    </div>
+                    <div className='input-field col s4'>
+                        <label htmlFor='livro'>Livro</label>
+                        <input
+                            className='validate'
+                            id='livro'
+                            type='text'
+                            name='livro'
+                            value={livro}
+                            onChange={this.escutadorDeInput}
+                        />
+                    </div>
+                    <div className='input-field col s4'>
+                        <label htmlFor='preco'>Preço</label>
+                        <input
+                            className='validate'
+                            id='preco'
+                            type='text'
+                            name='preco'
+                            value={preco}
+                            onChange={this.escutadorDeInput}
+                        />
+                    </div>
+                    <div className='input-field col s4'>
+                        <button className='waves-effect waves-light btn purple lighten-3' type='button' onClick={this.submitFormulario}>Salvar</button>
+                    </div>
+                </div>
             </form>
-         );
-     }
+        );
+    }
 }
 
 export default Formulario;

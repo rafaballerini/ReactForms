@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import removeAutor from './App';
 
 const TableHead = () => {
     return (
@@ -11,16 +10,16 @@ const TableHead = () => {
                 <th>Remover</th>
             </tr>
         </thead>
-    );
+    );  
 }
 const TableBody = props => {
     const linhas = props.autores.map((linha, index) => {
         return (
-            <tr>
+            <tr key={index}>
                 <td>{linha.nome}</td>
                 <td>{linha.livro}</td>
                 <td>{linha.preco}</td>
-                <td><button className='waves-effect waves-light btn  purple lighten-3' onClick = {() => {props.removeAutor(index) }}>Remover</button></td>
+                <td><button className='waves-effect waves-light btn purple lighten-3' onClick = {() => {props.removeAutor(index) }}>Remover</button></td>
             </tr>
     
         )
